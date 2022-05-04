@@ -1,0 +1,168 @@
+/**/
+body{
+	text-align: center;
+	font-family: Arial;
+}
+/**/
+h1{
+	font-size: 36px;
+	font-weight: bold;
+}
+/**/
+#board{
+	width: 350px;
+	height: 420px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	color: black;
+}
+
+.letter{
+	/* the tiles for worlde */
+	border: 2px solid #d3d6da;
+	width: 60px;
+	height: 60px;
+	margin: 1px;
+	
+	/* for the letters inside the tiles */
+	font-size: 36px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/**/
+#title{
+	font-family: 'nyt-karnakcondensed';
+	font-weight: 700;
+	
+  font-size: 37px;
+	text-align: center;
+}
+/**/
+#copyright{
+	text-align: center;
+}
+/**/
+#answer{
+	color: white;
+}
+/**/
+.correct{
+	background-color: #6AAA64;
+	color: white;
+}
+/**/
+.present{
+	background-color: #C9B458;
+	color: white;
+}
+/**/
+.absent{
+	background-color: #787C7E;
+	color: white;
+}
+
+.animation{
+	position: relative;
+	animation-name: flip;
+	animation-duration: 0.6s;
+	animation-direction: reverse;
+	transform-style: preserve-3d;
+}
+@keyframes flip{
+	to{transform: rotateX(180deg);}
+} 
+
+#dark-mode-text{
+	font-family: 'nyt-karnakcondensed';
+	font-weight: 700;
+	text-align:right;
+}
+.switch{
+  position: relative;
+	float: right;
+	margin-right:10px;
+  display: inline-block;
+	text-align: left;
+  width: 60px;
+  height: 34px;
+}
+
+.switchOrganizer{
+  position: relative;
+	
+}
+.positionDarkTheme{
+	position: absolute;
+  top: 0;
+  right: 0;
+}
+.positionHardMode{
+	position: absolute;
+  top: 0;
+  left: 0;
+}
+#hard-mode-text{
+	font-family: 'nyt-karnakcondensed';
+	font-weight: 700;
+	text-align:left;
+}
+
+#hard-mode{
+	float: left;
+	float: up;
+	bottom: 0;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before{
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#round {
+  border-radius: 34px;
+}
+
+#round:before{
+  border-radius: 50%;
+}
