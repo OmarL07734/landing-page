@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+		<script type = 'text/javascript' src = 'javascript/dark_mode.js'> </script>
+		<script type = 'text/javascript' src = "javascript/hard_mode.js"> </script>
+  </head>
+
+	<body>
+		<div class="switchOrganizer">
+			<div class="positionDarkTheme">
+				<p id = 'dark-mode-text' class = 'dark_text'> Dark Theme </p>
+				<label class="switch">
+					<input id = 'dark_mode' onclick = 'darkMode()' type="checkbox">
+					<span class="slider" id = 'round'> </span>
+				</label>
+			</div>
+			<div class="positionHardMode">
+				<p id = 'hard-mode-text' class = 'dark_text'> Hard Mode </p>
+				<label class = 'switch'>
+					<input id = 'hard_mode' onclick = 'hardMode()' type = 'checkbox'>
+					<span class = 'slider' id = 'round'></span>
+				</label>
+			</div>
+		</div>
+		
+		<h1 id="title" class = 'dark_text'>Wordle Clone</h1>
+		
+		<br>
+		
+		<div id = "board"> </div>
+
+		<h1 id = 'answer'>___</h1>
+    <script type = 'module' src="game.js"></script>
+	
+		<p id = "copyright" class = 'dark_text'><i>This was made by Derick D. and Omar L.</i></p>
+	</body>
+		
+</html>
